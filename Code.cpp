@@ -31,7 +31,7 @@ int main() {
             sprintf(strTime, "%02d:%02d\n", hour, minute);
         else
             sprintf(strTime, "%02d %02d\n", hour, minute);
-//        int swState = sw_slow + (sw_fast << 1);
+        
         printf("Colon state: %d", state);
         lcd.locate(0, 0);
         lcd.printf(strTime);
