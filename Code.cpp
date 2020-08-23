@@ -11,8 +11,8 @@ int main() {
     printf("61107959 Wathinee saeaui\n");
     state = 0;
     second = 0;
-    minute = 0;
-    hour = 10;
+    minute = 55;
+    hour = 11;
     while (1) {
         if (state++ >= 1) {
             state = 0;
@@ -28,9 +28,9 @@ int main() {
         }
         lcd.cls();
         if (state == 0)
-            sprintf(strTime, "%02d:%02d:%02d\n", hour, minute, second);
+            sprintf(strTime, "%02d:%02d\n", hour, minute);
         else
-            sprintf(strTime, "%02d %02d %02d\n", hour, minute, second);
+            sprintf(strTime, "%02d %02d\n", hour, minute);
 //        int swState = sw_slow + (sw_fast << 1);
         printf("Colon state: %d", state);
         lcd.locate(0, 0);
